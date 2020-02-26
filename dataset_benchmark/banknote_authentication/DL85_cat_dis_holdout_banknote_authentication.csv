@@ -1,0 +1,16 @@
+dataset_name,step, time_taken,K,dl8.5_train,dl8.5_test
+banknote_authentication,1,5.333333333333333e-05,2,0.8834,0.8921
+banknote_authentication,1,0.00024333333333333333,3,0.9261,0.9446
+banknote_authentication,1,0.0009750000000000001,4,0.9427,0.9563
+banknote_authentication,2,5e-05,2,0.8844,0.8921
+banknote_authentication,2,0.00016666666666666666,3,0.932,0.93
+banknote_authentication,2,0.0009733333333333333,4,0.9427,0.9621
+banknote_authentication,3,5e-05,2,0.8853,0.8892
+banknote_authentication,3,0.00018166666666666667,3,0.932,0.93
+banknote_authentication,3,0.001005,4,0.9456,0.9504
+banknote_authentication,4,4.833333333333333e-05,2,0.8882,0.8863
+banknote_authentication,4,0.000175,3,0.9397,0.9184
+banknote_authentication,4,0.0010183333333333333,4,0.9504,0.9329
+banknote_authentication,5,5e-05,2,0.8989,0.8542
+banknote_authentication,5,0.00018333333333333334,3,0.9388,0.9038
+banknote_authentication,5,0.000965,4,0.9602,0.9271

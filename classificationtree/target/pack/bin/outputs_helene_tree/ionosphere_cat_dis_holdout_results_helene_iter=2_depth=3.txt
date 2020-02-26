@@ -1,0 +1,22 @@
+Warning: JAVA_HOME environment variable is not set.
+Solution: 76(24(20(0:0,1:1),78(1:1,0:3)),26(31(1:2,0:2),32(0:1,1:5)))
+Cost: 15
+Search time: 8308
+Completed: true
+Total time: 8553
+Time to compute 8553
+Tree: 76(24(20(0:0,1:1),78(1:1,0:3)),26(31(1:2,0:2),32(0:1,1:5)))
+TestError: 10
+TestSize: 88
+TestAccuracy: 0.8863636363636364
+Warning: JAVA_HOME environment variable is not set.
+Solution: 76(24(20(0:0,1:1),78(1:1,0:3)),26(31(1:2,0:2),32(0:1,1:5)))
+Cost: 15
+Search time: 7757
+Completed: true
+Total time: 8015
+Time to compute 8016
+Tree: 76(24(20(0:0,1:1),78(1:1,0:3)),26(31(1:2,0:2),32(0:1,1:5)))
+TestError: 10
+TestSize: 88
+TestAccuracy: 0.8863636363636364
