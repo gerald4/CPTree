@@ -1,3 +1,0 @@
-dataset_name,step,optimality,time_taken,L,K,cart_train,cp_tree_train,cart_test,cp_tree_test
-iris,4,Optimal,0.008545835812886557,3,2,0.96,0.96,0.9459459459459459,0.9459459459459459
-iris,4,Optimal,0.02997343142827352,4,2,0.96,0.96,0.9459459459459459,0.8648648648648649

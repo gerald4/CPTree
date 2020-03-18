@@ -1,3 +1,0 @@
-dataset_name,step,optimality,time_taken,L,K,cart_train,cp_tree_train,cart_test,cp_tree_test
-ionosphere,5,Optimal,1.1019247015317282,3,2,0.8125,0.8125,0.7816091954022989,0.7816091954022989
-ionosphere,5,Not_Optimal,10.056404527028402,4,2,0.8125,0.8522727272727273,0.7816091954022989,0.8160919540229885
