@@ -15,6 +15,7 @@ from sklearn.preprocessing import KBinsDiscretizer
 
 
 def cat_to_bin(dataset, categorical_features):
+	#This function transforms categorical features into one-hot-encoding
 	data = dataset.loc[:,:]
 	for att in categorical_features:
 	    dm1 = pd.get_dummies(data[att], drop_first = False, prefix = att)
@@ -25,6 +26,7 @@ def cat_to_bin(dataset, categorical_features):
 	return data
 
 def cat_to_bin_encoding(data_train, data_test, categorical_features):
+	#This function transforms categorical features into one-hot-encoding by using the previous one
 
 	data = cat_to_bin(data_train.append(data_test), categorical_features)
 
@@ -33,6 +35,8 @@ def cat_to_bin_encoding(data_train, data_test, categorical_features):
 
 
 def num_to_cat(X_train, X_test, numerical_features, number_bins = 3):
+	#This function transforms numerical features by
+	# through the quantile discretiser of sklearn
 
 	data = X_train.values
 	enc=KBinsDiscretizer(n_bins = number_bins, encode = 'ordinal', strategy = 'quantile')
@@ -49,18 +53,13 @@ def num_to_cat(X_train, X_test, numerical_features, number_bins = 3):
 def train_val_test(data, list_classes, folder_name, numerical_features, categorical_features,
 				   dataset_name, use_classes=False, data2=pd.DataFrame(), nfolds = 5, bins=3):
 
+	# This fucntion preprocesses the dataset and split to train, val, test
+	#nfolds is the number of repetitions
+
 	X_test = None
 	y_test = None
 
-# =============================================================================
-# 	list_data_cont_train = []
-# 	list_data_cont_test = []
-#
-# 	list_data_dist_train = []
-# 	list_data_dist_test = []
-#
-# 	list_data_dist_val = []
-# =============================================================================
+
 	#Preprocessing dataset
 	Y = data['class']
 	X = data.drop('class',axis=1)
@@ -82,10 +81,13 @@ def train_val_test(data, list_classes, folder_name, numerical_features, categori
 		X_train = X
 		y_train = Y
 
+
 	for i in range(1, nfolds+1):
 		if data2.empty:
 			X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, stratify=Y, random_state = i)
 		print('Debug: ','shape Train, Test : ', X_train.shape, X_test.shape)
+
+		#Saving the orignal dataset (training and testing) with numerical features
 		pd.concat([X_train, y_train], axis = 1, ignore_index = True).to_csv(folder_name+dataset_name+"_"+"cat_num_train_"+str(i)+".csv", index = False, sep = ";")
 
 		pd.concat([X_test, y_test], axis = 1, ignore_index = True).to_csv(folder_name+dataset_name+"_"+"cat_num_test_"+str(i)+".csv", index = False, sep = ";")
@@ -116,39 +118,19 @@ def train_val_test(data, list_classes, folder_name, numerical_features, categori
 			X_train = X_train.drop(numerical_features, axis =1)
 			X_test = X_test.drop(numerical_features, axis =1)
 
-
+		#Saving the discritized dataset (training and testing)
 		pd.concat([X_train, y_train], axis = 1).to_csv(folder_name+dataset_name+"_"+"cat_dis_holdout_train_"+str(i)+".csv", index = False, sep = ";")
+
+		#Spliting training data into traning and validation
 		X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.33, stratify=y_train, random_state = 7)
 
 		print('Debug: ','shape Train, Val : ',X_train.shape, X_val.shape)
+
+		#Saving the discritized dataset (training, validation and testing)
 		pd.concat([X_train, y_train], axis = 1).to_csv(folder_name+dataset_name+"_"+"cat_dis_crossval_train_"+str(i)+".csv", index = False, sep = ";")
 		pd.concat([X_test, y_test], axis = 1).to_csv(folder_name+dataset_name+"_"+"cat_dis_holdout_test_"+str(i)+".csv", index = False, sep = ";")
 		pd.concat([X_val, y_val], axis = 1).to_csv(folder_name+dataset_name+"_"+"cat_dis_crossval_val_"+str(i)+".csv", index = False, sep = ";")
 
-
-# =============================================================================
-# 	X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, stratify=y_train)
-#
-#
-# 	C=np.unique(y_train)
-# 	if use_classes:
-# 		C=np.unique(list_classes)
-# 	lb=LabelBinarizer()
-# 	#lb.fit(C)
-# 	lb.fit(C)
-# 	y_train_ohot=lb.transform(y_train)
-# 	y_val_ohot=lb.transform(y_val)
-# 	y_test_ohot=lb.transform(y_test)
-# 	if len(C)==2:
-# 		y_train_ohot= np.hstack((1-y_train_ohot, y_train_ohot))
-# 		y_test_ohot= np.hstack((1-y_test_ohot, y_test_ohot))
-# 		y_val_ohot= np.hstack((1-y_val_ohot, y_val_ohot))
-#
-# 	N=X_train.shape[0]
-# 	M=X_train.shape[1]
-#
-# 	return N, M, X_train, X_val, X_test, y_train, y_val, y_test, y_train_ohot, y_val_ohot, y_test_ohot, list_classes,l_dataset
-# =============================================================================
 
 
 def  read_car_evaluation(path="dataset_benchmark/car/car.data", path_test=None):
@@ -256,6 +238,9 @@ def read_monk3(path="dataset_benchmark/monk3/monks-3.train",path_test="dataset_b
 
 
 def read_seismic(path="dataset_benchmark/seismic/seismic_bumps.csv", path_test=None):
+	#This dataset is taken from https://github.com/SiccoVerwer/binoct
+
+
 	dataset = pd.read_csv(path, delimiter=';')
 	dataset = dataset.rename(columns ={"Target": "class"})
 
@@ -270,6 +255,8 @@ def read_seismic(path="dataset_benchmark/seismic/seismic_bumps.csv", path_test=N
 
 
 def read_spambase(path="dataset_benchmark/spambase/spambase.csv", path_test=None):
+	#This dataset is taken from https://github.com/SiccoVerwer/binoct
+
 	dataset=pd.read_csv(path,delimiter=';')
 	#X =np.asarray(dataset.values[:,0:dataset.shape[1]]-1,dtype=np.str)
 
@@ -311,6 +298,8 @@ def read_pima_indian_diabetes(path="dataset_benchmark/pima_indian_diabetes/diabe
 				dataset_name = "pima_indian_diabetes", use_classes = False)
 
 def read_ionosphere(path="dataset_benchmark/ionosphere/Ionosphere.csv", path_test=None):
+	#This dataset is taken from https://github.com/SiccoVerwer/binoct
+
 	dataset=pd.read_csv(path,delimiter=';')
 	#X =np.asarray(dataset.values[:,0:dataset.shape[1]]-1,dtype=np.str)
 	dataset=dataset.dropna()
