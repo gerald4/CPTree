@@ -1,0 +1,11 @@
+Warning: JAVA_HOME environment variable is not set.
+Solution: 20(26(13(23(1:0,0:11),1:7),14(7(0:5,1:0),2(1:9,0:0))),5(8(2(1:0,0:13),14(1:9,0:0)),8(26(1:7,0:7),14(1:18,0:0))))
+Cost: 86
+Search time: 10630
+Completed: true
+Total time: 10892
+Time to compute 10892
+Tree: 20(26(13(23(1:0,0:11),1:7),14(7(0:5,1:0),2(1:9,0:0))),5(8(2(1:0,0:13),14(1:9,0:0)),8(26(1:7,0:7),14(1:18,0:0))))
+TestError: 51
+TestSize: 240
+TestAccuracy: 0.7875

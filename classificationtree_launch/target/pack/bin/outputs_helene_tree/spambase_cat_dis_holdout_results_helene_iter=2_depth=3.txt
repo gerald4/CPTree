@@ -1,0 +1,11 @@
+Warning: JAVA_HOME environment variable is not set.
+Solution: 7(12(1:91,13(1:19,0:77)),1(5(1:65,0:95),0:212))
+Cost: 559
+Search time: 154
+Completed: true
+Total time: 428
+Time to compute 429
+Tree: 7(12(1:91,13(1:19,0:77)),1(5(1:65,0:95),0:212))
+TestError: 172
+TestSize: 1151
+TestAccuracy: 0.8505647263249348

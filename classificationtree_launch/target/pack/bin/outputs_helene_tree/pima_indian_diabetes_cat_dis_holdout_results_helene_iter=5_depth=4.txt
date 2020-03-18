@@ -1,0 +1,11 @@
+Warning: JAVA_HOME environment variable is not set.
+Solution: 4(8(20(9(1:1,0:0),19(1:4,0:7)),14(0:9,22(1:8,0:14))),3(9(12(0:4,1:0),0:11),17(10(0:2,1:13),14(0:10,1:29))))
+Cost: 112
+Search time: 5508
+Completed: true
+Total time: 5731
+Time to compute 5731
+Tree: 4(8(20(9(1:1,0:0),19(1:4,0:7)),14(0:9,22(1:8,0:14))),3(9(12(0:4,1:0),0:11),17(10(0:2,1:13),14(0:10,1:29))))
+TestError: 56
+TestSize: 192
+TestAccuracy: 0.7083333333333334
