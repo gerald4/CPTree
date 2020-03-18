@@ -20,6 +20,9 @@ import argparse
 import dl85
 from dl85 import DL85Classifier
 
+
+#This code is based on https://dl85.readthedocs.io/en/latest/auto_examples/plot_classifier_iterative_c_plus.html
+
 dataname = ["balance_scale", "banknote_authentication", "biodeg", "car", "credit_approval", "hepatitis",
  		   "ionosphere", "iris", "mammographic_masses", "monk1", "monk2", "monk3", "pima_indian_diabetes",
  		   "post_operative_patient", "seismic", "spambase", "spect_heart", "thoracy_surgery", "tic_tac_toe",
@@ -47,6 +50,9 @@ k=args.K
 max_time=args.max_time
 dataset=args.dataset_name
 step=args.iter
+
+
+
 
 
 path_train = '../dataset_benchmark/'+dataset+'/'+dataset+'_cat_dis_holdout_train_'+str(step)+'.csv'
