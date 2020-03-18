@@ -1,8 +1,0 @@
-Warning: JAVA_HOME environment variable is not set.
-Solution: 0:128
-Cost: 128
-Search time: 45
-Completed: true
-Total time: 403
-Time to compute 403
-Tree: 0:128
