@@ -1,0 +1,2 @@
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;3.0;0.8947368421052632;0.9111111111111111

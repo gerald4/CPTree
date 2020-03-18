@@ -1,0 +1,12 @@
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
+depth;lamb;nleaves;trainaccu_CART;testaccu_CART
+2;0.1;2.0;0.7338709677419355;0.75
