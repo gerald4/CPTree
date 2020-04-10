@@ -1,0 +1,62 @@
+digraph {
+	graph [randir=LR]
+	node [shape=box]
+	0 [label="attribute=toothed
+samples=67
+value=[27, 13, 3, 9, 3, 5, 7]
+class=Mammal" fillcolor="#e5813980" style="rounded,filled"]
+	1 [label="attribute=eggs
+samples=41
+value=[27, 0, 2, 9, 3, 0, 0]
+class=Mammal" fillcolor="#e58139a4" style="rounded,filled"]
+	0 -> 1 [label="
+value=1"]
+	2 [label="attribute=backbone
+samples=26
+value=[0, 13, 1, 0, 0, 5, 7]
+class=Bird" fillcolor="#b7e5396d" style="rounded,filled"]
+	0 -> 2 [label="
+value=0"]
+	3 [label="attribute=legs_4
+samples=13
+value=[0, 0, 1, 9, 3, 0, 0]
+class=Fish" fillcolor="#39e5e299" style="rounded,filled"]
+	1 -> 3 [label="
+value=1"]
+	4 [label="samples=28
+value=[27, 0, 1, 0, 0, 0, 0]
+class=Mammal" fillcolor="#e58139ed" style="rounded,filled"]
+	1 -> 4 [label="
+value=0"]
+	5 [label="samples=14
+value=[0, 13, 1, 0, 0, 0, 0]
+class=Bird" fillcolor="#b7e539db" style="rounded,filled"]
+	2 -> 5 [label="
+value=1"]
+	6 [label="attribute=predator
+samples=12
+value=[0, 0, 0, 0, 0, 5, 7]
+class=Invertebrate" fillcolor="#e5398640" style="rounded,filled"]
+	2 -> 6 [label="
+value=0"]
+	7 [label="samples=3
+value=[0, 0, 0, 0, 3, 0, 0]
+class=Amphibian" fillcolor="#3956e5bf" style="rounded,filled"]
+	3 -> 7 [label="
+value=1"]
+	8 [label="samples=10
+value=[0, 0, 1, 9, 0, 0, 0]
+class=Fish" fillcolor="#39e5e2cc" style="rounded,filled"]
+	3 -> 8 [label="
+value=0"]
+	9 [label="samples=6
+value=[0, 0, 0, 0, 0, 0, 6]
+class=Invertebrate" fillcolor="#e53986db" style="rounded,filled"]
+	6 -> 9 [label="
+value=1"]
+	10 [label="samples=6
+value=[0, 0, 0, 0, 0, 5, 1]
+class=Bug" fillcolor="#b139e5aa" style="rounded,filled"]
+	6 -> 10 [label="
+value=0"]
+}
