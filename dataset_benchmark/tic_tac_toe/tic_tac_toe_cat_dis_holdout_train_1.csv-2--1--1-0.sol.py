@@ -6,9 +6,9 @@ train = "tic_tac_toe_cat_dis_holdout_train_1.csv"
 test = "tic_tac_toe_cat_dis_holdout_test_1.csv"
 def predict(row,header):
   if float(row[header["middle-middle-square_o"]]) <= 0.5:
-    if float(row[header["middle-right-square_x"]]) <= 0.5:
+    if float(row[header["bottom-right-square_x"]]) <= 0.5:
       return 1.0
-    if float(row[header["middle-right-square_x"]]) > 0.5:
+    if float(row[header["bottom-right-square_x"]]) > 0.5:
       return 1.0
   if float(row[header["middle-middle-square_o"]]) > 0.5:
     if float(row[header["top-left-square_x"]]) <= 0.5:

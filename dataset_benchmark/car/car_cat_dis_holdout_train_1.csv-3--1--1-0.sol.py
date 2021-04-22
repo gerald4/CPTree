@@ -6,26 +6,26 @@ train = "car_cat_dis_holdout_train_1.csv"
 test = "car_cat_dis_holdout_test_1.csv"
 def predict(row,header):
   if float(row[header["persons_2"]]) <= 0.5:
-    if float(row[header["lug_boot_small"]]) <= 0.5:
+    if float(row[header["safety_med"]]) <= 0.5:
       if float(row[header["safety_low"]]) <= 0.5:
         return 0.0
       if float(row[header["safety_low"]]) > 0.5:
         return 2.0
-    if float(row[header["lug_boot_small"]]) > 0.5:
-      if float(row[header["safety_high"]]) <= 0.5:
-        return 2.0
-      if float(row[header["safety_high"]]) > 0.5:
+    if float(row[header["safety_med"]]) > 0.5:
+      if float(row[header["lug_boot_small"]]) <= 0.5:
         return 0.0
+      if float(row[header["lug_boot_small"]]) > 0.5:
+        return 2.0
   if float(row[header["persons_2"]]) > 0.5:
-    if float(row[header["buying_low"]]) <= 0.5:
+    if float(row[header["buying_high"]]) <= 0.5:
       if float(row[header["buying_med"]]) <= 0.5:
         return 2.0
       if float(row[header["buying_med"]]) > 0.5:
         return 2.0
-    if float(row[header["buying_low"]]) > 0.5:
-      if float(row[header["persons_2"]]) <= 0.5:
+    if float(row[header["buying_high"]]) > 0.5:
+      if float(row[header["safety_med"]]) <= 0.5:
         return 2.0
-      if float(row[header["persons_2"]]) > 0.5:
+      if float(row[header["safety_med"]]) > 0.5:
         return 2.0
 
 

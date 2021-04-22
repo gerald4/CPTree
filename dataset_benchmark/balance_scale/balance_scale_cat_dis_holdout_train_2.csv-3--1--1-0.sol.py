@@ -5,27 +5,27 @@ import os
 train = "balance_scale_cat_dis_holdout_train_2.csv"
 test = "balance_scale_cat_dis_holdout_test_2.csv"
 def predict(row,header):
-  if float(row[header["Left-Weight_2"]]) <= 0.5:
-    if float(row[header["Left-Weight_1"]]) <= 0.5:
+  if float(row[header["Left-Weight_1"]]) <= 0.5:
+    if float(row[header["Left-Weight_2"]]) <= 0.5:
       if float(row[header["Left-Distance_1"]]) <= 0.5:
         return 1.0
       if float(row[header["Left-Distance_1"]]) > 0.5:
         return 2.0
-    if float(row[header["Left-Weight_1"]]) > 0.5:
-      if float(row[header["Right-Weight_1"]]) <= 0.5:
-        return 2.0
-      if float(row[header["Right-Weight_1"]]) > 0.5:
-        return 1.0
-  if float(row[header["Left-Weight_2"]]) > 0.5:
-    if float(row[header["Right-Weight_1"]]) <= 0.5:
+    if float(row[header["Left-Weight_2"]]) > 0.5:
       if float(row[header["Right-Distance_1"]]) <= 0.5:
         return 2.0
       if float(row[header["Right-Distance_1"]]) > 0.5:
         return 1.0
-    if float(row[header["Right-Weight_1"]]) > 0.5:
-      if float(row[header["Left-Distance_1"]]) <= 0.5:
+  if float(row[header["Left-Weight_1"]]) > 0.5:
+    if float(row[header["Right-Distance_5"]]) <= 0.5:
+      if float(row[header["Right-Weight_1"]]) <= 0.5:
+        return 2.0
+      if float(row[header["Right-Weight_1"]]) > 0.5:
         return 1.0
-      if float(row[header["Left-Distance_1"]]) > 0.5:
+    if float(row[header["Right-Distance_5"]]) > 0.5:
+      if float(row[header["Left-Weight_1"]]) <= 0.5:
+        return 2.0
+      if float(row[header["Left-Weight_1"]]) > 0.5:
         return 2.0
 
 

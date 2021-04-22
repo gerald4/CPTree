@@ -5,24 +5,24 @@ import os
 train = "ionosphere_cat_dis_holdout_train_3.csv"
 test = "ionosphere_cat_dis_holdout_test_3.csv"
 def predict(row,header):
-  if float(row[header["Feat10_0.0"]]) <= 0.5:
+  if float(row[header["Feat14_0.0"]]) <= 0.5:
     if float(row[header["Feat26_2.0"]]) <= 0.5:
-      if float(row[header["Feat12_0.0"]]) <= 0.5:
+      if float(row[header["Feat10_0.0"]]) <= 0.5:
         return 1.0
-      if float(row[header["Feat12_0.0"]]) > 0.5:
+      if float(row[header["Feat10_0.0"]]) > 0.5:
         return 0.0
     if float(row[header["Feat26_2.0"]]) > 0.5:
       if float(row[header["Feat27_1.0"]]) <= 0.5:
         return 0.0
       if float(row[header["Feat27_1.0"]]) > 0.5:
         return 1.0
-  if float(row[header["Feat10_0.0"]]) > 0.5:
-    if float(row[header["Feat14_0.0"]]) <= 0.5:
-      if float(row[header["Feat4_1.0"]]) <= 0.5:
+  if float(row[header["Feat14_0.0"]]) > 0.5:
+    if float(row[header["Feat13_2.0"]]) <= 0.5:
+      if float(row[header["Feat22_1.0"]]) <= 0.5:
         return 0.0
-      if float(row[header["Feat4_1.0"]]) > 0.5:
+      if float(row[header["Feat22_1.0"]]) > 0.5:
         return 1.0
-    if float(row[header["Feat14_0.0"]]) > 0.5:
+    if float(row[header["Feat13_2.0"]]) > 0.5:
       if float(row[header["Feat7_2.0"]]) <= 0.5:
         return 0.0
       if float(row[header["Feat7_2.0"]]) > 0.5:

@@ -11,10 +11,10 @@ def predict(row,header):
     if float(row[header["Feat51_1.0"]]) > 0.5:
       return 1.0
   if float(row[header["Feat18_2.0"]]) > 0.5:
-    if float(row[header["Feat20_1.0"]]) <= 0.5:
-      return 0.0
-    if float(row[header["Feat20_1.0"]]) > 0.5:
+    if float(row[header["Feat55_0.0"]]) <= 0.5:
       return 1.0
+    if float(row[header["Feat55_0.0"]]) > 0.5:
+      return 0.0
 
 
 def main(argv):

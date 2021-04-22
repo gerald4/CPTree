@@ -11,9 +11,9 @@ def predict(row,header):
     if float(row[header["safety_low"]]) > 0.5:
       return 2.0
   if float(row[header["persons_2"]]) > 0.5:
-    if float(row[header["safety_low"]]) <= 0.5:
+    if float(row[header["maint_low"]]) <= 0.5:
       return 2.0
-    if float(row[header["safety_low"]]) > 0.5:
+    if float(row[header["maint_low"]]) > 0.5:
       return 2.0
 
 

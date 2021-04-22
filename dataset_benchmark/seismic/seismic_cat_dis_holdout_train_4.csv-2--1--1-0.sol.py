@@ -5,16 +5,16 @@ import os
 train = "seismic_cat_dis_holdout_train_4.csv"
 test = "seismic_cat_dis_holdout_test_4.csv"
 def predict(row,header):
-  if float(row[header["Feat6_2.0"]]) <= 0.5:
-    if float(row[header["Feat12_1"]]) <= 0.5:
+  if float(row[header["Feat12_1"]]) <= 0.5:
+    if float(row[header["Feat3_0.0"]]) <= 0.5:
       return 0.0
-    if float(row[header["Feat12_1"]]) > 0.5:
+    if float(row[header["Feat3_0.0"]]) > 0.5:
+      return 0.0
+  if float(row[header["Feat12_1"]]) > 0.5:
+    if float(row[header["Feat5_0.0"]]) <= 0.5:
+      return 0.0
+    if float(row[header["Feat5_0.0"]]) > 0.5:
       return 1.0
-  if float(row[header["Feat6_2.0"]]) > 0.5:
-    if float(row[header["Feat3_1.0"]]) <= 0.5:
-      return 0.0
-    if float(row[header["Feat3_1.0"]]) > 0.5:
-      return 0.0
 
 
 def main(argv):

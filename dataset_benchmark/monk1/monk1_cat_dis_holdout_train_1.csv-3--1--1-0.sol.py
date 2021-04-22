@@ -17,16 +17,16 @@ def predict(row,header):
       if float(row[header["a2_2"]]) > 0.5:
         return 1.0
   if float(row[header["a2_3"]]) > 0.5:
-    if float(row[header["a5_1"]]) <= 0.5:
-      if float(row[header["a1_3"]]) <= 0.5:
+    if float(row[header["a1_3"]]) <= 0.5:
+      if float(row[header["a5_1"]]) <= 0.5:
         return 0.0
-      if float(row[header["a1_3"]]) > 0.5:
+      if float(row[header["a5_1"]]) > 0.5:
         return 1.0
-    if float(row[header["a5_1"]]) > 0.5:
-      if float(row[header["a1_1"]]) <= 0.5:
+    if float(row[header["a1_3"]]) > 0.5:
+      if float(row[header["a1_2"]]) <= 0.5:
         return 1.0
-      if float(row[header["a1_1"]]) > 0.5:
-        return 1.0
+      if float(row[header["a1_2"]]) > 0.5:
+        return 0.0
 
 
 def main(argv):

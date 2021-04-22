@@ -5,52 +5,52 @@ import os
 train = "pima_indian_diabetes_cat_dis_holdout_train_1.csv"
 test = "pima_indian_diabetes_cat_dis_holdout_test_1.csv"
 def predict(row,header):
-  if float(row[header["Pregnancies_0.0"]]) <= 0.5:
-    if float(row[header["Glucose_1.0"]]) <= 0.5:
-      if float(row[header["BMI_0.0"]]) <= 0.5:
+  if float(row[header["DiabetesPedigreeFunction_2.0"]]) <= 0.5:
+    if float(row[header["Insulin_1.0"]]) <= 0.5:
+      if float(row[header["Glucose_2.0"]]) <= 0.5:
+        if float(row[header["DiabetesPedigreeFunction_0.0"]]) <= 0.5:
+          return 0.0
+        if float(row[header["DiabetesPedigreeFunction_0.0"]]) > 0.5:
+          return 0.0
+      if float(row[header["Glucose_2.0"]]) > 0.5:
+        if float(row[header["BMI_2.0"]]) <= 0.5:
+          return 0.0
+        if float(row[header["BMI_2.0"]]) > 0.5:
+          return 1.0
+    if float(row[header["Insulin_1.0"]]) > 0.5:
+      if float(row[header["Age_0.0"]]) <= 0.5:
         if float(row[header["Glucose_2.0"]]) <= 0.5:
           return 0.0
         if float(row[header["Glucose_2.0"]]) > 0.5:
           return 1.0
-      if float(row[header["BMI_0.0"]]) > 0.5:
-        if float(row[header["Pregnancies_2.0"]]) <= 0.5:
-          return 0.0
-        if float(row[header["Pregnancies_2.0"]]) > 0.5:
-          return 0.0
-    if float(row[header["Glucose_1.0"]]) > 0.5:
-      if float(row[header["Pregnancies_2.0"]]) <= 0.5:
-        if float(row[header["Pregnancies_1.0"]]) <= 0.5:
-          return 1.0
-        if float(row[header["Pregnancies_1.0"]]) > 0.5:
-          return 0.0
-      if float(row[header["Pregnancies_2.0"]]) > 0.5:
-        if float(row[header["BloodPressure_0.0"]]) <= 0.5:
-          return 0.0
-        if float(row[header["BloodPressure_0.0"]]) > 0.5:
-          return 1.0
-  if float(row[header["Pregnancies_0.0"]]) > 0.5:
-    if float(row[header["DiabetesPedigreeFunction_0.0"]]) <= 0.5:
-      if float(row[header["Glucose_0.0"]]) <= 0.5:
+      if float(row[header["Age_0.0"]]) > 0.5:
         if float(row[header["Age_0.0"]]) <= 0.5:
           return 1.0
         if float(row[header["Age_0.0"]]) > 0.5:
           return 0.0
-      if float(row[header["Glucose_0.0"]]) > 0.5:
-        if float(row[header["Pregnancies_1.0"]]) <= 0.5:
+  if float(row[header["DiabetesPedigreeFunction_2.0"]]) > 0.5:
+    if float(row[header["Glucose_2.0"]]) <= 0.5:
+      if float(row[header["Age_0.0"]]) <= 0.5:
+        if float(row[header["BloodPressure_2.0"]]) <= 0.5:
           return 0.0
-        if float(row[header["Pregnancies_1.0"]]) > 0.5:
+        if float(row[header["BloodPressure_2.0"]]) > 0.5:
           return 1.0
-    if float(row[header["DiabetesPedigreeFunction_0.0"]]) > 0.5:
-      if float(row[header["Age_2.0"]]) <= 0.5:
-        if float(row[header["Age_1.0"]]) <= 0.5:
+      if float(row[header["Age_0.0"]]) > 0.5:
+        if float(row[header["Pregnancies_0.0"]]) <= 0.5:
           return 0.0
-        if float(row[header["Age_1.0"]]) > 0.5:
+        if float(row[header["Pregnancies_0.0"]]) > 0.5:
           return 0.0
-      if float(row[header["Age_2.0"]]) > 0.5:
-        if float(row[header["BloodPressure_1.0"]]) <= 0.5:
+    if float(row[header["Glucose_2.0"]]) > 0.5:
+      if float(row[header["Glucose_2.0"]]) <= 0.5:
+        if float(row[header["Pregnancies_0.0"]]) <= 0.5:
           return 0.0
-        if float(row[header["BloodPressure_1.0"]]) > 0.5:
+        if float(row[header["Pregnancies_0.0"]]) > 0.5:
+          return 0.0
+      if float(row[header["Glucose_2.0"]]) > 0.5:
+        if float(row[header["BMI_0.0"]]) <= 0.5:
           return 1.0
+        if float(row[header["BMI_0.0"]]) > 0.5:
+          return 0.0
 
 
 def main(argv):

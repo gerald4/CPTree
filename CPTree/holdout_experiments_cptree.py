@@ -24,7 +24,7 @@ import argparse
 
 plt.style.use('classic')
 
-from utils import decisionTreeConstraint, predict, export_graphviz_cp
+from utils2 import decisionTreeConstraint, predict, export_graphviz_cp
 
 
 if __name__=='__main__':
@@ -80,8 +80,7 @@ if __name__=='__main__':
 	class_names = [str(i) for i in C]
 	col_names = list(data_train)[:-1]
 	C=class_names
-	#filepath='../dataset_benchmark/'+dataset+'/CPtree_holdout_'+dataset+'.csv'
-	filepath='time_depth_variant/CPtree_holdout_depth=5_'+dataset+'.csv'
+	filepath='../dataset_benchmark/'+dataset+'/CPtree_holdout_'+dataset+'.csv'
 
 
 	print("*******Model Construction********")

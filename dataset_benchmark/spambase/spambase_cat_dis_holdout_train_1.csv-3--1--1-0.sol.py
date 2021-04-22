@@ -5,26 +5,26 @@ import os
 train = "spambase_cat_dis_holdout_train_1.csv"
 test = "spambase_cat_dis_holdout_test_1.csv"
 def predict(row,header):
-  if float(row[header["Feat4_1.0"]]) <= 0.5:
-    if float(row[header["Feat51_1.0"]]) <= 0.5:
-      if float(row[header["Feat51_1.0"]]) <= 0.5:
-        return 0.0
-      if float(row[header["Feat51_1.0"]]) > 0.5:
-        return 0.0
-    if float(row[header["Feat51_1.0"]]) > 0.5:
-      if float(row[header["Feat54_2.0"]]) <= 0.5:
-        return 0.0
-      if float(row[header["Feat54_2.0"]]) > 0.5:
+  if float(row[header["Feat4_0.0"]]) <= 0.5:
+    if float(row[header["Feat51_0.0"]]) <= 0.5:
+      if float(row[header["Feat56_2.0"]]) <= 0.5:
         return 1.0
-  if float(row[header["Feat4_1.0"]]) > 0.5:
-    if float(row[header["Feat51_1.0"]]) <= 0.5:
+      if float(row[header["Feat56_2.0"]]) > 0.5:
+        return 1.0
+    if float(row[header["Feat51_0.0"]]) > 0.5:
       if float(row[header["Feat20_1.0"]]) <= 0.5:
         return 0.0
       if float(row[header["Feat20_1.0"]]) > 0.5:
         return 1.0
-    if float(row[header["Feat51_1.0"]]) > 0.5:
-      if float(row[header["Feat56_2.0"]]) <= 0.5:
+  if float(row[header["Feat4_0.0"]]) > 0.5:
+    if float(row[header["Feat56_0.0"]]) <= 0.5:
+      if float(row[header["Feat51_0.0"]]) <= 0.5:
         return 1.0
+      if float(row[header["Feat51_0.0"]]) > 0.5:
+        return 0.0
+    if float(row[header["Feat56_0.0"]]) > 0.5:
+      if float(row[header["Feat56_2.0"]]) <= 0.5:
+        return 0.0
       if float(row[header["Feat56_2.0"]]) > 0.5:
         return 1.0
 

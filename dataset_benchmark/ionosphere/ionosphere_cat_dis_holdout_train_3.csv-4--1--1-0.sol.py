@@ -6,51 +6,51 @@ train = "ionosphere_cat_dis_holdout_train_3.csv"
 test = "ionosphere_cat_dis_holdout_test_3.csv"
 def predict(row,header):
   if float(row[header["Feat2_0.0"]]) <= 0.5:
-    if float(row[header["Feat26_2.0"]]) <= 0.5:
-      if float(row[header["Feat4_0.0"]]) <= 0.5:
-        if float(row[header["Feat33_1.0"]]) <= 0.5:
-          return 1.0
-        if float(row[header["Feat33_1.0"]]) > 0.5:
-          return 1.0
-      if float(row[header["Feat4_0.0"]]) > 0.5:
-        if float(row[header["Feat22_0.0"]]) <= 0.5:
-          return 1.0
-        if float(row[header["Feat22_0.0"]]) > 0.5:
-          return 0.0
-    if float(row[header["Feat26_2.0"]]) > 0.5:
-      if float(row[header["Feat10_2.0"]]) <= 0.5:
-        if float(row[header["Feat15_0.0"]]) <= 0.5:
-          return 0.0
-        if float(row[header["Feat15_0.0"]]) > 0.5:
-          return 1.0
-      if float(row[header["Feat10_2.0"]]) > 0.5:
+    if float(row[header["Feat17_2.0"]]) <= 0.5:
+      if float(row[header["Feat21_0.0"]]) <= 0.5:
         if float(row[header["Feat27_1.0"]]) <= 0.5:
           return 0.0
         if float(row[header["Feat27_1.0"]]) > 0.5:
+          return 1.0
+      if float(row[header["Feat21_0.0"]]) > 0.5:
+        if float(row[header["Feat2_0.0"]]) <= 0.5:
+          return 1.0
+        if float(row[header["Feat2_0.0"]]) > 0.5:
+          return 0.0
+    if float(row[header["Feat17_2.0"]]) > 0.5:
+      if float(row[header["Feat26_2.0"]]) <= 0.5:
+        if float(row[header["Feat4_0.0"]]) <= 0.5:
+          return 1.0
+        if float(row[header["Feat4_0.0"]]) > 0.5:
+          return 0.0
+      if float(row[header["Feat26_2.0"]]) > 0.5:
+        if float(row[header["Feat3_1.0"]]) <= 0.5:
+          return 0.0
+        if float(row[header["Feat3_1.0"]]) > 0.5:
           return 1.0
   if float(row[header["Feat2_0.0"]]) > 0.5:
-    if float(row[header["Feat22_1.0"]]) <= 0.5:
-      if float(row[header["Feat5_2.0"]]) <= 0.5:
-        if float(row[header["Feat18_2.0"]]) <= 0.5:
+    if float(row[header["Feat27_2.0"]]) <= 0.5:
+      if float(row[header["Feat27_0.0"]]) <= 0.5:
+        if float(row[header["Feat24_1.0"]]) <= 0.5:
           return 0.0
-        if float(row[header["Feat18_2.0"]]) > 0.5:
-          return 0.0
-      if float(row[header["Feat5_2.0"]]) > 0.5:
-        if float(row[header["Feat27_1.0"]]) <= 0.5:
-          return 0.0
-        if float(row[header["Feat27_1.0"]]) > 0.5:
+        if float(row[header["Feat24_1.0"]]) > 0.5:
           return 1.0
-    if float(row[header["Feat22_1.0"]]) > 0.5:
-      if float(row[header["Feat30_1.0"]]) <= 0.5:
-        if float(row[header["Feat17_0.0"]]) <= 0.5:
+      if float(row[header["Feat27_0.0"]]) > 0.5:
+        if float(row[header["Feat21_2.0"]]) <= 0.5:
           return 0.0
-        if float(row[header["Feat17_0.0"]]) > 0.5:
-          return 1.0
-      if float(row[header["Feat30_1.0"]]) > 0.5:
-        if float(row[header["Feat27_0.0"]]) <= 0.5:
-          return 1.0
-        if float(row[header["Feat27_0.0"]]) > 0.5:
+        if float(row[header["Feat21_2.0"]]) > 0.5:
           return 0.0
+    if float(row[header["Feat27_2.0"]]) > 0.5:
+      if float(row[header["Feat24_1.0"]]) <= 0.5:
+        if float(row[header["Feat8_1.0"]]) <= 0.5:
+          return 0.0
+        if float(row[header["Feat8_1.0"]]) > 0.5:
+          return 1.0
+      if float(row[header["Feat24_1.0"]]) > 0.5:
+        if float(row[header["Feat22_1.0"]]) <= 0.5:
+          return 0.0
+        if float(row[header["Feat22_1.0"]]) > 0.5:
+          return 1.0
 
 
 def main(argv):

@@ -7,10 +7,10 @@ test = "iris_cat_dis_holdout_test_1.csv"
 def predict(row,header):
   if float(row[header["Petal_length_1.0"]]) <= 0.5:
     if float(row[header["Sepal_length_2.0"]]) <= 0.5:
-      if float(row[header["Petal_length_2.0"]]) <= 0.5:
-        return 0.0
-      if float(row[header["Petal_length_2.0"]]) > 0.5:
+      if float(row[header["Petal_length_0.0"]]) <= 0.5:
         return 2.0
+      if float(row[header["Petal_length_0.0"]]) > 0.5:
+        return 0.0
     if float(row[header["Sepal_length_2.0"]]) > 0.5:
       if float(row[header["Petal_width_2.0"]]) <= 0.5:
         return 1.0
@@ -18,10 +18,10 @@ def predict(row,header):
         return 2.0
   if float(row[header["Petal_length_1.0"]]) > 0.5:
     if float(row[header["Sepal_width_2.0"]]) <= 0.5:
-      if float(row[header["Petal_width_1.0"]]) <= 0.5:
-        return 2.0
-      if float(row[header["Petal_width_1.0"]]) > 0.5:
+      if float(row[header["Petal_width_2.0"]]) <= 0.5:
         return 1.0
+      if float(row[header["Petal_width_2.0"]]) > 0.5:
+        return 2.0
     if float(row[header["Sepal_width_2.0"]]) > 0.5:
       if float(row[header["Sepal_length_0.0"]]) <= 0.5:
         return 1.0

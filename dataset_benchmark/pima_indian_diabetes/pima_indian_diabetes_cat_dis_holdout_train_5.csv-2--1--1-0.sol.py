@@ -5,15 +5,15 @@ import os
 train = "pima_indian_diabetes_cat_dis_holdout_train_5.csv"
 test = "pima_indian_diabetes_cat_dis_holdout_test_5.csv"
 def predict(row,header):
-  if float(row[header["Glucose_2.0"]]) <= 0.5:
-    if float(row[header["BMI_0.0"]]) <= 0.5:
+  if float(row[header["BMI_0.0"]]) <= 0.5:
+    if float(row[header["Glucose_2.0"]]) <= 0.5:
       return 0.0
-    if float(row[header["BMI_0.0"]]) > 0.5:
-      return 0.0
-  if float(row[header["Glucose_2.0"]]) > 0.5:
-    if float(row[header["BMI_0.0"]]) <= 0.5:
+    if float(row[header["Glucose_2.0"]]) > 0.5:
       return 1.0
-    if float(row[header["BMI_0.0"]]) > 0.5:
+  if float(row[header["BMI_0.0"]]) > 0.5:
+    if float(row[header["Age_2.0"]]) <= 0.5:
+      return 0.0
+    if float(row[header["Age_2.0"]]) > 0.5:
       return 0.0
 
 

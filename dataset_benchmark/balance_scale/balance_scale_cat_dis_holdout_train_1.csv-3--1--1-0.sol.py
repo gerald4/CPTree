@@ -23,9 +23,9 @@ def predict(row,header):
       if float(row[header["Right-Distance_1"]]) > 0.5:
         return 1.0
     if float(row[header["Left-Weight_1"]]) > 0.5:
-      if float(row[header["Left-Weight_1"]]) <= 0.5:
+      if float(row[header["Right-Distance_4"]]) <= 0.5:
         return 2.0
-      if float(row[header["Left-Weight_1"]]) > 0.5:
+      if float(row[header["Right-Distance_4"]]) > 0.5:
         return 2.0
 
 

@@ -1,16 +1,4 @@
 dataset_name,step, time_taken,K,dl8.5_train,dl8.5_test
-post_operative_patient,1,6.333333333333333e-05,2,0.7538,0.7273
-post_operative_patient,1,0.00044500000000000003,3,0.8308,0.7273
-post_operative_patient,1,0.0027983333333333332,4,0.9077,0.5909
-post_operative_patient,2,7.166666666666667e-05,2,0.7538,0.7273
-post_operative_patient,2,0.0005266666666666667,3,0.8154,0.7273
-post_operative_patient,2,0.0034233333333333333,4,0.9077,0.6818
-post_operative_patient,3,7e-05,2,0.7846,0.6364
-post_operative_patient,3,0.0005366666666666666,3,0.8154,0.5
-post_operative_patient,3,0.00322,4,0.8923,0.5909
-post_operative_patient,4,2.8333333333333332e-05,2,1.0,0.6818
-post_operative_patient,4,2.5e-05,3,1.0,0.6818
-post_operative_patient,4,2.8333333333333332e-05,4,1.0,0.6818
-post_operative_patient,5,6.833333333333335e-05,2,0.7077,0.7727
-post_operative_patient,5,0.0005033333333333334,3,0.7846,0.6818
-post_operative_patient,5,0.0032083333333333334,4,0.8769,0.7273
+post_operative_patient,1,4.3333333333333334e-05,2,0.7538,0.7273
+post_operative_patient,1,0.000275,3,0.8308,0.7273
+post_operative_patient,1,0.00199,4,0.9077,0.5909

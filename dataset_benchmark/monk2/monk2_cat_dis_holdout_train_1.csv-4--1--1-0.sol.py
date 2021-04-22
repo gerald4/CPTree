@@ -5,51 +5,51 @@ import os
 train = "monk2_cat_dis_holdout_train_1.csv"
 test = "monk2_cat_dis_holdout_test_1.csv"
 def predict(row,header):
-  if float(row[header["a4_1"]]) <= 0.5:
-    if float(row[header["a1_1"]]) <= 0.5:
-      if float(row[header["a5_1"]]) <= 0.5:
-        if float(row[header["a3_2"]]) <= 0.5:
-          return 1.0
-        if float(row[header["a3_2"]]) > 0.5:
+  if float(row[header["a3"]]) <= 1.5:
+    if float(row[header["a6"]]) <= 1.5:
+      if float(row[header["a4"]]) <= 1.5:
+        if float(row[header["a5"]]) <= 3.5:
           return 0.0
-      if float(row[header["a5_1"]]) > 0.5:
-        if float(row[header["a3_2"]]) <= 0.5:
+        if float(row[header["a5"]]) > 3.5:
           return 0.0
-        if float(row[header["a3_2"]]) > 0.5:
-          return 1.0
-    if float(row[header["a1_1"]]) > 0.5:
-      if float(row[header["a6_2"]]) <= 0.5:
-        if float(row[header["a3_2"]]) <= 0.5:
+      if float(row[header["a4"]]) > 1.5:
+        if float(row[header["a1"]]) <= 1.5:
           return 0.0
-        if float(row[header["a3_2"]]) > 0.5:
+        if float(row[header["a1"]]) > 1.5:
           return 1.0
-      if float(row[header["a6_2"]]) > 0.5:
-        if float(row[header["a5_1"]]) <= 0.5:
-          return 1.0
-        if float(row[header["a5_1"]]) > 0.5:
+    if float(row[header["a6"]]) > 1.5:
+      if float(row[header["a4"]]) <= 1.5:
+        if float(row[header["a5"]]) <= 2.5:
           return 0.0
-  if float(row[header["a4_1"]]) > 0.5:
-    if float(row[header["a3_2"]]) <= 0.5:
-      if float(row[header["a1_1"]]) <= 0.5:
-        if float(row[header["a6_2"]]) <= 0.5:
+        if float(row[header["a5"]]) > 2.5:
+          return 1.0
+      if float(row[header["a4"]]) > 1.5:
+        if float(row[header["a5"]]) <= 1.5:
           return 0.0
-        if float(row[header["a6_2"]]) > 0.5:
+        if float(row[header["a5"]]) > 1.5:
           return 1.0
-      if float(row[header["a1_1"]]) > 0.5:
-        if float(row[header["a1_1"]]) <= 0.5:
-          return 1.0
-        if float(row[header["a1_1"]]) > 0.5:
+  if float(row[header["a3"]]) > 1.5:
+    if float(row[header["a4"]]) <= 1.5:
+      if float(row[header["a6"]]) <= 1.5:
+        if float(row[header["a3"]]) <= 1.5:
           return 0.0
-    if float(row[header["a3_2"]]) > 0.5:
-      if float(row[header["a2_2"]]) <= 0.5:
-        if float(row[header["a6_2"]]) <= 0.5:
+        if float(row[header["a3"]]) > 1.5:
           return 0.0
-        if float(row[header["a6_2"]]) > 0.5:
+      if float(row[header["a6"]]) > 1.5:
+        if float(row[header["a2"]]) <= 1.5:
           return 1.0
-      if float(row[header["a2_2"]]) > 0.5:
-        if float(row[header["a2_2"]]) <= 0.5:
+        if float(row[header["a2"]]) > 1.5:
+          return 0.0
+    if float(row[header["a4"]]) > 1.5:
+      if float(row[header["a1"]]) <= 1.5:
+        if float(row[header["a6"]]) <= 1.5:
           return 1.0
-        if float(row[header["a2_2"]]) > 0.5:
+        if float(row[header["a6"]]) > 1.5:
+          return 0.0
+      if float(row[header["a1"]]) > 1.5:
+        if float(row[header["a5"]]) <= 1.5:
+          return 1.0
+        if float(row[header["a5"]]) > 1.5:
           return 0.0
 
 

@@ -5,15 +5,15 @@ import os
 train = "tic_tac_toe_cat_dis_holdout_train_3.csv"
 test = "tic_tac_toe_cat_dis_holdout_test_3.csv"
 def predict(row,header):
-  if float(row[header["middle-left-square_b"]]) <= 0.5:
-    if float(row[header["middle-middle-square_o"]]) <= 0.5:
+  if float(row[header["middle-middle-square_o"]]) <= 0.5:
+    if float(row[header["top-left-square_b"]]) <= 0.5:
       return 1.0
-    if float(row[header["middle-middle-square_o"]]) > 0.5:
+    if float(row[header["top-left-square_b"]]) > 0.5:
+      return 1.0
+  if float(row[header["middle-middle-square_o"]]) > 0.5:
+    if float(row[header["middle-left-square_b"]]) <= 0.5:
       return 0.0
-  if float(row[header["middle-left-square_b"]]) > 0.5:
-    if float(row[header["top-left-square_x"]]) <= 0.5:
-      return 1.0
-    if float(row[header["top-left-square_x"]]) > 0.5:
+    if float(row[header["middle-left-square_b"]]) > 0.5:
       return 1.0
 
 

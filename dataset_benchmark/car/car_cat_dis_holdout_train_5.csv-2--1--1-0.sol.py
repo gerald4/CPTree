@@ -5,15 +5,15 @@ import os
 train = "car_cat_dis_holdout_train_5.csv"
 test = "car_cat_dis_holdout_test_5.csv"
 def predict(row,header):
-  if float(row[header["safety_low"]]) <= 0.5:
-    if float(row[header["persons_2"]]) <= 0.5:
+  if float(row[header["persons_2"]]) <= 0.5:
+    if float(row[header["safety_low"]]) <= 0.5:
       return 0.0
-    if float(row[header["persons_2"]]) > 0.5:
+    if float(row[header["safety_low"]]) > 0.5:
       return 2.0
-  if float(row[header["safety_low"]]) > 0.5:
-    if float(row[header["buying_high"]]) <= 0.5:
+  if float(row[header["persons_2"]]) > 0.5:
+    if float(row[header["doors_2"]]) <= 0.5:
       return 2.0
-    if float(row[header["buying_high"]]) > 0.5:
+    if float(row[header["doors_2"]]) > 0.5:
       return 2.0
 
 

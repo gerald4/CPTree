@@ -5,28 +5,28 @@ import os
 train = "iris_cat_dis_holdout_train_4.csv"
 test = "iris_cat_dis_holdout_test_4.csv"
 def predict(row,header):
-  if float(row[header["Petal_length_0.0"]]) <= 0.5:
-    if float(row[header["Sepal_length_1.0"]]) <= 0.5:
-      if float(row[header["Petal_width_2.0"]]) <= 0.5:
+  if float(row[header["Sepal_length_1.0"]]) <= 0.5:
+    if float(row[header["Petal_width_2.0"]]) <= 0.5:
+      if float(row[header["Petal_length_0.0"]]) <= 0.5:
         return 1.0
-      if float(row[header["Petal_width_2.0"]]) > 0.5:
+      if float(row[header["Petal_length_0.0"]]) > 0.5:
+        return 0.0
+    if float(row[header["Petal_width_2.0"]]) > 0.5:
+      if float(row[header["Petal_width_0.0"]]) <= 0.5:
         return 2.0
-    if float(row[header["Sepal_length_1.0"]]) > 0.5:
-      if float(row[header["Petal_length_1.0"]]) <= 0.5:
+      if float(row[header["Petal_width_0.0"]]) > 0.5:
+        return 0.0
+  if float(row[header["Sepal_length_1.0"]]) > 0.5:
+    if float(row[header["Petal_length_1.0"]]) <= 0.5:
+      if float(row[header["Sepal_width_2.0"]]) <= 0.5:
         return 2.0
-      if float(row[header["Petal_length_1.0"]]) > 0.5:
+      if float(row[header["Sepal_width_2.0"]]) > 0.5:
+        return 0.0
+    if float(row[header["Petal_length_1.0"]]) > 0.5:
+      if float(row[header["Petal_width_1.0"]]) <= 0.5:
         return 1.0
-  if float(row[header["Petal_length_0.0"]]) > 0.5:
-    if float(row[header["Sepal_length_1.0"]]) <= 0.5:
-      if float(row[header["Sepal_length_0.0"]]) <= 0.5:
-        return 2.0
-      if float(row[header["Sepal_length_0.0"]]) > 0.5:
-        return 0.0
-    if float(row[header["Sepal_length_1.0"]]) > 0.5:
-      if float(row[header["Sepal_length_0.0"]]) <= 0.5:
-        return 0.0
-      if float(row[header["Sepal_length_0.0"]]) > 0.5:
-        return 2.0
+      if float(row[header["Petal_width_1.0"]]) > 0.5:
+        return 1.0
 
 
 def main(argv):
