@@ -1,7 +1,7 @@
 
 graphviz==0.13
 networkx==2.4
-numpy==1.18.1
+numpy==1.22.0
 ortools==7.4.72470
 pandas==1.0.1
 scikit-learn==0.22.2
